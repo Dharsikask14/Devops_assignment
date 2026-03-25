@@ -1,1 +1,3 @@
-console.log("Git Workflow Project Started");
+function showMessage() {
+    alert("Welcome! Git Learning Started ");
+}
