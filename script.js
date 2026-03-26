@@ -1,3 +1,9 @@
-function showMessage() {
-    alert("Welcome! Git Learning Started ");
-}
+
+console.log("JS connected successfully!");
+
+const button = document.getElementById("getStartedBtn");
+
+button.addEventListener("click", function() {
+    alert("Welcome to Bloom Flower Shop 🌸");
+
+});

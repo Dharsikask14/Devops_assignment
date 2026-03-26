@@ -2,56 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
 }
 
-nav {
-    background: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
+body {
+    line-height: 1.6;
 }
 
-.hero {
-    height: 90vh;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: white;
+header {
+    background: #ffb6c1;
+    padding: 15px 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.hero h1 {
+header h1 {
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero h2 {
     font-size: 40px;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.hero button {
-    padding: 10px 20px;
-    border: none;
-    background: white;
-    color: #333;
-    cursor: pointer;
+
+.btn {
+    background: #ff69b4;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-.hero button:hover {
-    background: #ddd;
+.btn:hover {
+    background: #ff1493;
 }
+
 
 footer {
-    text-align: center;
-    padding: 10px;
     background: #333;
     color: white;
+    text-align: center;
+    padding: 15px;
 }
