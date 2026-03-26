@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
     background: #ffb6c1;
     padding: 15px 40px;
@@ -32,7 +34,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-
+/* Hero Section */
 .hero {
     height: 80vh;
     background: url('https://images.unsplash.com/photo-1490750967868-88aa4486c946') no-repeat center/cover;
@@ -58,7 +60,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-
+/* Button */
 .btn {
     background: #ff69b4;
     color: white;
@@ -72,7 +74,7 @@ nav a:hover {
     background: #ff1493;
 }
 
-
+/* Footer */
 footer {
     background: #333;
     color: white;
