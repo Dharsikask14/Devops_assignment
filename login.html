@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom & Co. | Flower Shop Login</title>
+    <style>
+        /* CSS Variables for a Floral Theme */
+        :root {
+            --primary-color: #e84393; /* Vibrant floral pink */
+            --primary-hover: #d63031;
+            --bg-gradient: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+        }
+
+        /* Base Reset and Layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content & Centering */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Login Card & Entry Animation */
+        .login-container {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.15);
+            width: 100%;
+            max-width: 380px;
+            animation: slideUpFade 0.8s ease-out forwards;
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        /* Floating Label Input Animation */
+        .input-group {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #dfe6e9;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+            background: transparent;
+        }
+
+        .input-group input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            pointer-events: none;
+            transition: all 0.3s ease;
+            background-color: var(--white);
+            padding: 0 4px;
+        }
+
+        /* Trigger label float on focus or when input is not empty */
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Button Styling & Hover Animation */
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(232, 67, 147, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Extra Links */
+        .extras {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .extras a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .extras a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--white);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌸 Blossom & Co.</h1>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h2>Welcome Back</h2>
+            <form id="loginForm">
+                
+                <div class="input-group">
+                    <input type="email" id="email" placeholder=" " required autocomplete="email">
+                    <label for="email">Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" " required autocomplete="current-password">
+                    <label for="password">Password</label>
+                </div>
+
+                <button type="submit" id="submitBtn">Sign In</button>
+
+                <div class="extras">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Blossom & Co. All rights reserved. Let love bloom.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('loginForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            form.addEventListener('submit', (e) => {
+                // Prevent the default form submission for demonstration
+                e.preventDefault();
+
+                // Button loading animation state
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Verifying details...';
+                submitBtn.style.opacity = '0.8';
+                submitBtn.style.pointerEvents = 'none'; // Prevent double clicking
+
+                // Simulate an API call / loading delay
+                setTimeout(() => {
+                    alert('Success! Welcome to Blossom & Co.');
+                    
+                    // Reset form and button state
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.pointerEvents = 'auto';
+                }, 1500);
+            });
+        });
+    </script>
+
+</body>
+</html>
